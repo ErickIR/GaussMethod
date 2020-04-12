@@ -82,18 +82,41 @@ namespace Melma
             return matrix;
         }
 
-        public void PrintMatriz()
+        public void PrintResults()
         {
-            for (int i = 0; i < tamMatriz; i++)
+            PrintMatriz();
+            PrintVector();
+            PrintSolucion();
+        }
+
+        
+        private void PrintSolucion()
+        {
+            Console.WriteLine("Vector Solucion: ");
+            for(int i = 0;i < tamMatriz;i++)
             {
-                Console.Write("[");
-                for (int j = 0; j < tamMatriz; j++)
+                Console.WriteLine("S[{0}]: {1}", i, solucion[i]);
+            }
+        }
+
+        private void PrintVector()
+        {
+            Console.WriteLine("Vector Final: ");
+            for(int i = 0;i < tamMatriz;i++)
+            {
+                Console.WriteLine("V[{0}]: {1}", i, vector[i]);
+            }
+        }
+
+        private void PrintMatriz()
+        {
+            Console.WriteLine("Matriz final: ");
+            for(int i = 0; i < tamMatriz; i++)
+            {
+                for(int j = 0; j < tamMatriz; j++) 
                 {
-                    Console.Write("{0},", matrix[i][j]);
+                    Console.WriteLine("M[{0}, {1}]: {2}", i, j, matrix[i][j]);
                 }
-                Console.Write("]");
-                Console.Write("[{0}]", vector[i]);
-                Console.WriteLine("[{0}]", solucion[i]);
             }
         }
     }

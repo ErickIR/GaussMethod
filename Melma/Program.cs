@@ -16,7 +16,7 @@ namespace Melma
             GaussMatrix matriz = new GaussMatrix(tamMatriz);
             matriz.IntroducirElementos();
             matriz.ObtenerSoluciones();
-            matriz.PrintMatriz();
+            matriz.PrintResults();
             
             Console.ReadLine();
         }
